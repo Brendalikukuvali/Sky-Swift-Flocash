@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sky-Swift Flow Cash</title>
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <nav class="flex items-center justify-between flex-wrap bg-teal p-6" style="background-color: #ed6a05; height: 150px">
+            <div class="flex items-center flex-no-shrink text-white mr-6">
+              <img src="./images/sky-swiftlMainLogo.png" style="padding-top: 20px">
+            </div>
+          </nav>
+    </header>
+    <div class="swift">
+        <i class="fa fa-facebook"></i>
+    <h1 >Hello, Welcome to To Our Flocash System</h1>
+    <h3 >Please pay to Lester Software ltd </h3>
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <form action="https://sandbox.flocash.com/ecom/ecommerce.do" name="frm-pin" method="post" action="pin-index-a.php style="text-align: center; margin: auto;" name="frm-pin" method="post" action="pin-index-a.php">
+    <!--Merchant account-->
+    <input type="hidden" name="merchant" value="sky-swift@mobirr.com"/>
+    <input type="hidden" name="cancel_url" value="https://www.sky-swift.com">
+    <input type="hidden" name="notify_url" value="https://www.sky-swift.com">
+    <!--Order Id-->
+    <input type="hidden" name="order_id" value=”123456” />
+    <!--Customer Id-->
+    <input type="hidden" name="custom" value="custom"/>
+    <!--Currency Code-->
+    <input type="hidden" name="currency_code" value="KES"/>
+
+    <table  class="items" >
+    <tr>
+            <td>Item Name<span class="required">*</span>
+            </td>
+            <td >
+                <input  type="text" id="Item" placeholder="Laptop"  required/>
+        </td>
+    </tr>
+        <tr>
+            <td>Item Price <span class="required">*</span>
+            </td>
+            <td>
+                <input  type="number" id="Item" placeholder="50000" amount="50000"  required/>
+        </td>
+    </tr>
+    <tr>
+    <td>Quantity<span class="required">*</span></td>
+      <td>
+            <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+            <option value="" selected>Please select...</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </td>
+    
+    </tr>
+        <tr>
+            <td>Amount <span class="required">*</span></td>
+            <td>
+                <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="number" readonly>
+            </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td>
+            <input type="submit" value="CheckOut" class="sub" >
+        </td>
+        </tr>
+    </table>
+
+        <script>
+            function calculateAmount(val) {
+                var price = 50000;
+                var quantiy = val;
+                var tot_price = val * price
+
+                /*display the result*/
+                var divobj = document.getElementById('tot_amount');
+                divobj.value = tot_price;
+            }
+        </script>
+</form>
+
+<!-- <div class="bottom-box" style="background-color: #ed6a05; height: 50px; margin-top: 50px;"></div>
+ -->
+ <footer>
+    <div class="footer-distributed" style="margin-bottom: 10px; margin: auto;  text-align: justify;">
+        <div class="logo" style="float: left; margin-left: 40px; ">
+        <img style="width:220px;" src=" ./images/sky-swiftlMainLogo.png" alt="">
+        <p class="text" style="font-size: large;">Sky-Swift is a modern agency that provides destinations 
+        <br>and vacations with a touch of class.</p>
+
+        <a href="https://www.facebook.com/skyswiftlimited/" ><i class="fab fa-facebook" style="color: #ed6a05; width: 40px"></i></a>
+        <a href="#" class="flex items-center justify-center"><i class="fab fa-twitter" style="color: #ed6a05; width: 40px"></i></a>
+        <a href="#" class="flex items-center justify-center"><i class="fab fa-instagram" style="color: #ed6a05; width: 40px"></i></a>
+        <a href="#" class="flex items-center justify-center"><i class="fab fa-youtube" style="color: #ed6a05; width: 40px"></i></a>
+        </div>
+        
+            <div class="contacts" style="float: left; margin-left: 140px; text-decoration: none; color: #000; font-size: large; ">
+            <p><a href="tel:+25433555504" class="cont" >Phone: 0733 555 504,</a> 
+            </p>
+            <p><a href="mailto:info@sky-swift.com" class="email" s>Email: info@sky-swift.com</a>
+            </p>
+            <p class="box" >P.O.Box 49993-00100</p>
+            <p class="floor">Flamingo Towers 4th floor wing A, Mara Rd, <br> Upperhill,Nairobi</p>
+            </div>
+
+            <div class=" careers" style="float: right; margin-right: 40px; font-size: large; text-decoration: none;">
+            <p><a href="https://www.sky-swift.com/terms" class=" terms">Terms &amp; Conditions</a>
+            </p>
+            <p><a href="https://www.sky-swift.com/use_policy" class="policy" >Acceptable Information Technology Use Policy</a>
+            </p>
+            <p><a href="https://www.sky-swift.com/privacypolicy"  class="privacy"> Privacy Policy</a>
+            </p>
+            <p><a href="https://www.sky-swift.com/careers" class="career">Careers</a>
+            </p>
+            </div>
+</footer>
+</body>
+</html>
